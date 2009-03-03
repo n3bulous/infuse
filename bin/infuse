@@ -1,0 +1,47 @@
+#!/usr/bin/env ruby
+
+begin
+  require 'infuse'
+rescue LoadError => exception
+  $:.unshift File.dirname(File.expand_path(__FILE__)) + "/../lib"
+  retry
+end
+
+def title(text)
+  InfuseDSL.instance.title = text
+end
+
+def author(text)
+  InfuseDSL.instance.author = text
+end
+
+def company(text)
+  InfuseDSL.instance.company = text
+end
+
+def copyright(text)
+  InfuseDSL.instance.copyright = text
+end
+
+def subtitle(text)
+  InfuseDSL.instance.subtitle = text
+end
+
+def background(text)
+  InfuseDSL.instance.background = text
+end
+
+def slide(title, *content)
+  s = Slide.new(title, content)
+  InfuseDSL.instance.add_slide(s)
+end
+
+def notes(*content)
+  InfuseDSL.instance.slides.last.notes(content)
+end
+
+InfuseDSL.instance.source_file = ARGV[0]
+InfuseDSL.instance.output_dir = File.dirname(ARGV[0]) + "/" + File.basename(ARGV[0], ".#{INFUSE_EXTENSION}")
+
+load InfuseDSL.instance.source_file
+InfuseDSL.instance.run

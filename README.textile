@@ -1,0 +1,79 @@
+h1. Infuse
+
+h2. Description
+
+Create HTML slide shows with a simple DSL.
+
+h2. Installation
+
+<pre>
+  sudo gem install kmcfadden-infuse -s http://gems.github.com
+</pre>
+
+h2. Usage
+
+<pre>
+  infuse -o presentation presentation.infuse
+</pre>
+
+h2. Example
+
+<pre>
+title "Gitting Jiggy with Git"
+subtitle "Managing Documents with a Source Code Management System"
+author "Kevin McFadden"
+company "Concepts Ahead"
+copyright "2009 Kevin McFadden"
+background ""
+
+slide "Who is this Guy?", <<_EOS
+* Name: Kevin McFadden
+* Current: Concepts Ahead
+* Past: Director of Technology @ Viget Labs IN D.C.
+* Other projects found on "Github":https://github.com/n3bulous/.
+_EOS
+</pre>
+
+h2. Future
+
+* Add cli help and options.
+* Support TextMate
+* Support Rakefile
+* Support Markdown
+* Custom theme support
+* Code formatting
+* Animations
+* Let me know, or contribute!
+
+h2. Useful Info
+
+* You can use "iRed Light":http://www.filewell.com/iRedLite/ to control any application.  In this case, assign the up and down cursor keys to your preferred buttons.
+
+h2. Inspiration
+
+Infuse was born out of getting caught up in the look of slide show presentations with Keynote, and out of the frustration of "codex's":http://github.com/pragdave/codex complicated process.
+
+h2. License
+
+Copyright &copy; 2009 Kevin McFadden, Concepts Ahead
+
+Permission is hereby granted, free of charge, to any person
+obtaining a copy of this software and associated documentation
+files (the "Software"), to deal in the Software without
+restriction, including without limitation the rights to use,
+copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the
+Software is furnished to do so, subject to the following
+conditions:
+
+The above copyright notice and this permission notice shall be
+included in all copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND,
+EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES
+OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND
+NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT
+HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY,
+WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING
+FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR
+OTHER DEALINGS IN THE SOFTWARE.
