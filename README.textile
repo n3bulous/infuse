@@ -37,7 +37,7 @@ slide "Who is this Guy?", <<_EOS
 * Name: Kevin McFadden
 * Current: Concepts Ahead
 * Past: Director of Technology @ Viget Labs IN D.C.
-* Other projects found on "Github":https://github.com/n3bulous/.
+* Other projects found on "Github":http://github.com/n3bulous/.
 _EOS
 </pre>
 
@@ -69,6 +69,10 @@ h2. References
 * "s6":http://github.com/geraldb/s6/tree/master
 * "codex":http://github.com/pragdave/codex
 * "Dave Thomas' _Our take on presenting code_":
+
+h2. Thanks
+
+* "Simple Gem":http://github.com/reagent/simple-gem/tree/master by Patrick Reagan.
 
 h2. License
 
