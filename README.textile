@@ -46,8 +46,10 @@ h2. Future
 * Add cli help and options
 * Support external resources (images, ...)
 * Figure out why my redcloth dependency check fails.
+* Syntax highlighting
 * Support TextMate
 * Support Rakefile
+* Tests for included code
 * Support Markdown
 * Custom theme support
 * Code formatting
@@ -60,7 +62,13 @@ h2. Useful Info
 
 h2. Inspiration
 
-Infuse was born out of getting caught up in the look of slide show presentations with Keynote, and out of the frustration of "codex's":http://github.com/pragdave/codex complicated process.
+Infuse was born out of productivity hiccups experienced while designing the slide show look and feel in Keynote instead of writing the actual presentation.  Dave Thomas produced codex, but I felt I was jumping through some unnecessary hoops with it, and I wanted to support custom themes, all while streamlining the process.
+
+h2. References
+
+* "s6":http://github.com/geraldb/s6/tree/master
+* "codex":http://github.com/pragdave/codex
+* "Dave Thomas' _Our take on presenting code_":
 
 h2. License
 
