@@ -7,14 +7,21 @@ Create HTML slide shows with a simple DSL.
 h2. Installation
 
 <pre>
-  sudo gem install kmcfadden-infuse -s http://gems.github.com
+  sudo gem install n3bulous-infuse --source=http://gems.github.com
 </pre>
 
 h2. Usage
 
 <pre>
-  infuse -o presentation presentation.infuse
+  infuse presentation.infuse
 </pre>
+
+The above command will:
+
+* Parse your slide show file.
+* Create a directory named "presentation" if it doesn't already exist.
+* Populate the directory with default files (the first time.)
+* Convert your slide show markup to an HTML file.
 
 h2. Example
 
@@ -36,13 +43,15 @@ _EOS
 
 h2. Future
 
-* Add cli help and options.
+* Add cli help and options
+* Support external resources (images, ...)
+* Figure out why my redcloth dependency check fails.
 * Support TextMate
 * Support Rakefile
 * Support Markdown
 * Custom theme support
 * Code formatting
-* Animations
+* Animated transitions
 * Let me know, or contribute!
 
 h2. Useful Info
