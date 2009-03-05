@@ -1,0 +1,21 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN">
+<html>
+  <head>
+    <title><%= @title %></title>
+    <meta http-equiv=expires content="-1">
+    <meta http-equiv=Cache-Control CONTENT=no-cache>
+    <meta http-equiv=Pragma CONTENT=no-cache>
+
+    <link rel="stylesheet" href="operashow-custom.css" type="text/css">
+  </head>
+
+  <body>
+<% if background.length > 0 %>
+    <div class="layout">
+      <div class="background">
+        <object data="<%= @background %>" width="100%" height="100%">
+        </object>
+      </div>
+    </div>
+<% end %>
+

@@ -31,6 +31,15 @@ def background(text)
   InfuseDSL.instance.background = text
 end
 
+def format(text)
+  InfuseDSL.instance.format = text
+end
+
+def transition(text)
+  InfuseDSL.instance.transition = text
+end
+
+
 def slide(title, *content)
   s = Slide.new(title, content)
   InfuseDSL.instance.add_slide(s)
