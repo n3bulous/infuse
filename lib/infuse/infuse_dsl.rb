@@ -15,13 +15,15 @@ class InfuseDSL
     @operashow_templates = {
         :header => "operashow-header.html.erb",
         :footer => "operashow-footer.html.erb",
-        :slide => "slide.html.erb"
+        :slide => "slide.html.erb",
+        :title_slide => "title-page.html.erb"
     }
 
     @html_templates = {
         :header => "header.html.erb",
         :footer => "footer.html.erb",
-        :slide => "slide.html.erb"
+        :slide => "slide.html.erb",
+        :title_slide => "title-page.html.erb"
     }
   end
 
@@ -30,8 +32,8 @@ class InfuseDSL
   end
 
   def run
-    html_output = generate_html_slideshow
-    operashow_output = generate_operashow_slideshow
+    html_output = generate_slideshow(@html_templates)
+    operashow_output = generate_slideshow(@operashow_templates)
 
     prepare_target_dir
 
@@ -47,32 +49,27 @@ class InfuseDSL
 
 private
 
-  def generate_slide_output(header_tpl, footer_tpl, slide_tpl)
+  def generate_slide_output(header_tpl, footer_tpl, slide_tpl, title_tpl)
     header_with_data = ERB.new(header_tpl, 0, ">").result(self.send(:binding))
     footer_with_data = ERB.new(footer_tpl, 0, ">").result(self.send(:binding))
+
+    title_slide_with_data = ERB.new(title_tpl, 0, ">").result(self.send(:binding))
 
     slides_with_data = ""
     @slides.each do |s|
       slides_with_data << s.convert(slide_tpl) + "\n\n"
     end
 
-    output = header_with_data + "\n" + slides_with_data + "\n" + footer_with_data
+    output = header_with_data + "\n" + title_slide_with_data + "\n" + slides_with_data + "\n" + footer_with_data
   end
 
-  def generate_html_slideshow
-    header_tpl = IO.read(@template_dir + @html_templates[:header])
-    footer_tpl = IO.read(@template_dir + @html_templates[:footer])
-    slide_tpl = IO.read(@template_dir + @html_templates[:slide])
+  def generate_slideshow(templates)
+    header_tpl = IO.read(@template_dir + templates[:header])
+    footer_tpl = IO.read(@template_dir + templates[:footer])
+    slide_tpl = IO.read(@template_dir + templates[:slide])
+    title_tpl = IO.read(@template_dir + templates[:title_slide])
 
-    generate_slide_output(header_tpl, footer_tpl, slide_tpl)
-  end
-
-  def generate_operashow_slideshow
-    header_tpl = IO.read(@template_dir + @operashow_templates[:header])
-    footer_tpl = IO.read(@template_dir + @operashow_templates[:footer])
-    slide_tpl = IO.read(@template_dir + @operashow_templates[:slide])
-
-    generate_slide_output(header_tpl, footer_tpl, slide_tpl)
+    generate_slide_output(header_tpl, footer_tpl, slide_tpl, title_tpl)
   end
 
   def output_file(name_prefix="")

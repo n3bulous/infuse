@@ -37,3 +37,18 @@ div#header, div#footer {
 .step { color: gray; }
 /* or hide next steps e.g.  .step { visibility: hidden; } */
 .stepcurrent { color: yellow; }
+
+.center-img {
+	display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+
+.title-slide {
+	text-align: center;
+}
+
+.title-slide h1 { font-size: 4em; }
+.title-slide h2 { font-size: 3em; }
+.title-slide h3 { font-size: 2em; }
