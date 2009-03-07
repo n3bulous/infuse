@@ -52,3 +52,7 @@ div#header, div#footer {
 .title-slide h1 { font-size: 4em; }
 .title-slide h2 { font-size: 3em; }
 .title-slide h3 { font-size: 2em; }
+
+.notes {
+	display: none;
+}

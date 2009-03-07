@@ -4,9 +4,16 @@ h2. Description
 
 Create HTML slide shows with a simple DSL.
 
+h2. Requirements
+
+* redcloth
+* actionpack
+
 h2. Installation
 
 <pre>
+  sudo gem install redcloth
+  sudo gem install actionpack
   sudo gem install n3bulous-infuse --source=http://gems.github.com
 </pre>
 
