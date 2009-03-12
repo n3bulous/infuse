@@ -2,11 +2,11 @@
 
 Gem::Specification.new do |s|
   s.name = %q{infuse}
-  s.version = "0.9.6"
+  s.version = "0.9.7"
 
   s.required_rubygems_version = Gem::Requirement.new(">= 0") if s.respond_to? :required_rubygems_version=
   s.authors = ["Kevin McFadden"]
-  s.date = %q{2009-03-10}
+  s.date = %q{2009-03-11}
   s.default_executable = %q{infuse}
   s.email = %q{kevin+github@conceptsahead.com}
   s.executables = ["infuse"]

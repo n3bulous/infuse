@@ -4,13 +4,14 @@ require 'singleton'
 class InfuseDSL
   include Singleton
 
-  # Specified
-  attr_accessor :slides, :title, :author, :company, :copyright, :subtitle, :background, :format, :transition
+  attr_accessor :slides, :title, :author, :company, :copyright, :subtitle
+  attr_accessor :background, :format, :transition
   # Derived
   attr_accessor :source_file, :output_dir
 
   def initialize
     @slides = []
+    @title = @author = @company = @copyright = @subtitle = @background = @format = @transition = ""
 
     @template_dir = File.dirname(__FILE__) + "/themes/plain/"
     @operashow_templates = {
