@@ -40,12 +40,12 @@ company "Concepts Ahead"
 copyright "2009 Kevin McFadden"
 background ""
 
-slide "Who is this Guy?", <<_EOS
+slide "Who is this Guy?", %{
 * Name: Kevin McFadden
 * Current: Concepts Ahead
 * Past: Director of Technology @ Viget Labs IN D.C.
 * Other projects found on "Github":http://github.com/n3bulous/.
-_EOS
+}
 </pre>
 
 h2. Future Features
